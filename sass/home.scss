@@ -49,7 +49,7 @@ body{
     }
   }
 
-  //container
+  //container 1
   .container-1{
     h1{
         color: white;
@@ -60,4 +60,70 @@ body{
         -1px 1px 0 #284565,   /* sombra inferior esquerda */
         1px 1px 0 #284565;    /* sombra inferior direita */
     }
+  }
+
+  //conteiner 2
+  .container-2{
+    margin-top: 100px;
+  }
+  .tamanho{
+      
+  }
+  /* btn */
+  .btn-section {
+    font-size: 17px;
+    background: transparent;
+    border: none;
+    padding: 1em 1.5em;
+    color: #284565;
+    text-transform: uppercase;
+    position: relative;
+    transition: color 0.5s ease, background-color 0.4s ease;
+    cursor: pointer;
+  
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      background-color: #284565;
+      transition: 0.5s ease;
+      z-index: -1;
+    }
+  
+    &::before {
+      height: 2px;
+      width: 0;
+    }
+  
+    &::after {
+      height: 0;
+      width: 100%;
+      transition: height 0.4s ease;
+    }
+  
+    &:hover {
+      color: white;
+      transition-delay: 0.5s;
+  
+      &::before {
+        width: 100%;
+      }
+  
+      &::after {
+        height: 100%;
+        transition-delay: 0.4s;
+      }
+    }
+  }
+  
+  // footer
+  .estilo-footer{
+    background: #284565;
+    margin-top: 100px;
+    p{
+        color: white;
+    }
+
   }

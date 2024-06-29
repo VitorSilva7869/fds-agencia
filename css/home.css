@@ -53,4 +53,58 @@ body {
   text-shadow: -1px -1px 0 #284565, 1px -1px 0 #284565, -1px 1px 0 #284565, 1px 1px 0 #284565; /* sombra inferior direita */
 }
 
+.container-2 {
+  margin-top: 100px;
+}
+
+/* btn */
+.btn-section {
+  font-size: 17px;
+  background: transparent;
+  border: none;
+  padding: 1em 1.5em;
+  color: #284565;
+  text-transform: uppercase;
+  position: relative;
+  transition: color 0.5s ease, background-color 0.4s ease;
+  cursor: pointer;
+}
+.btn-section::before, .btn-section::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  background-color: #284565;
+  transition: 0.5s ease;
+  z-index: -1;
+}
+.btn-section::before {
+  height: 2px;
+  width: 0;
+}
+.btn-section::after {
+  height: 0;
+  width: 100%;
+  transition: height 0.4s ease;
+}
+.btn-section:hover {
+  color: white;
+  transition-delay: 0.5s;
+}
+.btn-section:hover::before {
+  width: 100%;
+}
+.btn-section:hover::after {
+  height: 100%;
+  transition-delay: 0.4s;
+}
+
+.estilo-footer {
+  background: #284565;
+  margin-top: 100px;
+}
+.estilo-footer p {
+  color: white;
+}
+
 /*# sourceMappingURL=home.css.map */
